@@ -1,0 +1,7 @@
+qiskit==2.2.3   # < 3.0: QFTGate API; QFT/BlueprintCircuit classes are deprecated
+numpy==1.26.4
+stim==1.14.0     # last wheels for Python 3.9
+pymatching==2.2.1
+# figures only
+matplotlib==3.9.4
+pillow==11.3.0

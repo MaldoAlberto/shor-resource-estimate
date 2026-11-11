@@ -1,0 +1,34 @@
+R1  ccx count of real Qiskit circuits (Cuccaro adder, cumulative multiplier); relative scaling only
+    n =   4: adder     8   multiplier    260
+    n =   8: adder    16   multiplier   1032
+    n =  16: adder    32   multiplier   4112
+    n =  32: adder    64   multiplier      -
+    fitted exponent: adder n^1.00, multiplier n^1.99  -> exponentiation (2n multiplications) ~ n^2.99
+
+R2  physical qubits per rotated surface-code patch (stim)
+    d = 3: 17 qubits, rule 2d^2-1 = 17  OK
+    d = 5: 49 qubits, rule 2d^2-1 = 49  OK
+    d = 7: 97 qubits, rule 2d^2-1 = 97  OK
+    d = 9: 161 qubits, rule 2d^2-1 = 161  OK
+
+R3  logical error per round (circuit-level noise, pymatching), and Lambda per d -> d+2
+    p = 1e-03: d=3: 2.4e-04 (216/300000)  d=5: 2.6e-05 (211/1600000)  d=7: 2.4e-06 (34/2000000)   Lambda = 9.94  (rule p_th/p with p_th = 1 %: 10.0)
+    p = 2e-03: d=3: 9.8e-04 (294/100000)  d=5: 1.9e-04 (278/300000)  d=7: 4.1e-05 (228/800000)   Lambda = 4.91  (rule p_th/p with p_th = 1 %: 5.0)
+    p = 4e-03: d=3: 3.8e-03 (1122/100000)  d=5: 1.6e-03 (776/100000)  d=7: 6.2e-04 (435/100000)   Lambda = 2.46  (rule p_th/p with p_th = 1 %: 2.5)
+    p = 6e-03: d=3: 8.0e-03 (2387/100000)  d=5: 4.6e-03 (2300/100000)  d=7: 2.8e-03 (1959/100000)   Lambda = 1.69  (rule p_th/p with p_th = 1 %: 1.7)
+    p = 1e-02: d=3: 2.0e-02 (5852/100000)  d=5: 1.8e-02 (8470/100000)  d=7: 1.6e-02 (10397/100000)   Lambda = 1.13  (rule p_th/p with p_th = 1 %: 1.0)
+
+R4  one d = 3 patch at p = 2e-3: failure vs number of rounds
+      3 rounds: P_fail = 3.01e-03  (2104/700000)
+      9 rounds: P_fail = 8.48e-03  (2545/300000)
+     27 rounds: P_fail = 2.47e-02  (2468/100000)
+     81 rounds: P_fail = 6.99e-02  (6991/100000)
+
+R5  base case: RSA-2048 at p = 1e-3 needs p_L < 7.5e-17 per qubit per round
+    fitted simulated curve: Lambda = 9.94 (68 % band 9.1-11.0)  ->  d = 29 (68 % band 29-31);  GE19 rule of thumb gives d = 31
+    d = 3: simulated 2.4e-04, formula 1.0e-03 (formula / simulation = 4.2)
+    d = 5: simulated 2.6e-05, formula 1.0e-04 (formula / simulation = 3.8)
+    d = 7: simulated 2.4e-06, formula 1.0e-05 (formula / simulation = 4.1)
+
+    done in 35 s
+    saved rules.json

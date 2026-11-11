@@ -1,0 +1,118 @@
+{
+ "part_a": {
+  "N": 15,
+  "a": 7,
+  "n_count": 8,
+  "counts": {
+   "qubits": 12,
+   "cx": 540,
+   "one_qubit": 2981,
+   "depth": 1941
+  },
+  "cx_one_multiplication": 236,
+  "peaks": {
+   "0": 0.2500000000000057,
+   "64": 0.2499999999999917,
+   "128": 0.25000000000000405,
+   "192": 0.24999999999999767
+  },
+  "period": 4,
+  "factors": [
+   3,
+   5
+  ]
+ },
+ "part_b": {
+  "assumptions": {
+   "cycle_us": 1.0,
+   "reaction_rounds": 10,
+   "p_th": 0.01,
+   "fail_budget": 0.01,
+   "routing": 1.5,
+   "factories": "4 x 12 patches (crude)"
+  },
+  "rows": [
+   {
+    "n": 8,
+    "p": 0.001,
+    "logical_qubits": 24.048,
+    "logical_qubits_min": 19,
+    "toffolis": 154.368,
+    "meas_depth": 32192.0,
+    "distance": 15,
+    "physical_qubits": 37832.399999999994,
+    "hours": 8.942222222222222e-05
+   },
+   {
+    "n": 64,
+    "p": 0.001,
+    "logical_qubits": 192.768,
+    "logical_qubits_min": 131,
+    "toffolis": 79429.632,
+    "meas_depth": 2072576.0,
+    "distance": 21,
+    "physical_qubits": 297368.064,
+    "hours": 0.0057571555555555555
+   },
+   {
+    "n": 256,
+    "p": 0.001,
+    "logical_qubits": 772.096,
+    "logical_qubits_min": 515,
+    "toffolis": 5100273.664,
+    "meas_depth": 33292288.0,
+    "distance": 25,
+    "physical_qubits": 1507680.0,
+    "hours": 0.09247857777777778
+   },
+   {
+    "n": 1024,
+    "p": 0.001,
+    "logical_qubits": 3092.48,
+    "logical_qubits_min": 2051,
+    "toffolis": 327491256.32,
+    "meas_depth": 534773760.0,
+    "distance": 29,
+    "physical_qubits": 7883063.040000001,
+    "hours": 1.4854826666666667
+   },
+   {
+    "n": 2048,
+    "p": 0.001,
+    "logical_qubits": 6189.056,
+    "logical_qubits_min": 4099,
+    "toffolis": 2624225017.856,
+    "meas_depth": 2143289344.0,
+    "distance": 31,
+    "physical_qubits": 17935304.448,
+    "hours": 5.9535815111111114
+   },
+   {
+    "n": 4096,
+    "p": 0.001,
+    "logical_qubits": 12386.304,
+    "logical_qubits_min": 8195,
+    "toffolis": 21028159881.216,
+    "meas_depth": 8589934592.0,
+    "distance": 33,
+    "physical_qubits": 40570599.168,
+    "hours": 23.860929422222224
+   }
+  ],
+  "published": [
+   {
+    "label": "Gidney-Ekera 2019",
+    "n": 2048,
+    "physical_qubits": 20000000.0,
+    "hours": 8
+   },
+   {
+    "label": "Gidney 2025 (preprint)",
+    "n": 2048,
+    "physical_qubits": 1000000.0,
+    "hours": 168,
+    "upper_bound": true
+   }
+  ]
+ }
+}
